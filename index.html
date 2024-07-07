@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>To-Do App</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="todo-list-creation">
+            <h2>Create To-Do List</h2>
+            <form id="create-list-form">
+                <input type="text" id="list-name" placeholder="List Name" required>
+                <button type="submit">Create List</button>
+            </form>
+        </section>
+        <section class="task-management">
+            <h2>Task Management</h2>
+            <div class="task-controls">
+                <input type="text" id="task-name" placeholder="Task Name" required>
+                <select id="task-priority" type="input">
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="task-due-date">
+                <button id="add-task-btn">Add Task</button>
+            </div>
+            <div class="task-filters">
+                <!-- <input type="text" id="search-task" placeholder="Search Tasks"> -->
+                <select id="filter-priority">
+                    <option value="">All</option>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                </select>
+                <input type="date" id="filter-due-date">
+            </div>
+            <div id="task-list" class="task-cards"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 To-Do App. All rights reserved.</p>
+    </footer>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

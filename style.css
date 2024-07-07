@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #fff;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-top: 0;
+}
+
+form, .task-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form button, .task-controls input, .task-controls select, .task-controls button {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.task-filters {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.task-filters input, .task-filters select {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+#task-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.task-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.task-card:hover {
+    transform: scale(1.02);
+}
+
+.task-card h3 {
+    margin: 0 0 0.5rem;
+}
+
+.task-card p {
+    margin: 0.5rem 0;
+}
+
+.task-card .edit-task, .task-card .delete-task {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.task-card .edit-task:hover, .task-card .delete-task:hover {
+    background-color: #555;
+}
+
+.task-card .delete-task {
+    background-color: #e74c3c;
+}
+
+.task-card .delete-task:hover {
+    background-color: #c0392b;
+}
+
+.task-card.low {
+    border-left: 5px solid green;
+}
+
+.task-card.medium {
+    border-left: 5px solid orange;
+}
+
+.task-card.high {
+    border-left: 5px solid red;
+}
+
+.task-card.completed {
+    background-color: #d3ffd3;
+    text-decoration: line-through;
+    color: #a0a0a0;
+}
+
+.task-card.completed .edit-task, .task-card.completed .delete-task {
+    background-color: #999;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
